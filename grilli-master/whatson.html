@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What's On - Tigerbay</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .promo-img {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+
+      .service-card {
+        background-color: #1e1e1e;
+        padding: 1.5rem;
+        border-radius: 16px;
+        max-width: 360px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s;
+        text-align: center;
+      }
+
+      .service-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .service-card .card-title {
+        margin-top: 1rem;
+        font-size: 22px;
+        color: #fff;
+      }
+
+      .service-card .btn {
+        margin-top: 1rem;
+        background-color: #f9c06a;
+        color: #000;
+        padding: 10px 24px;
+        border-radius: 6px;
+        font-weight: 600;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease;
+      }
+
+      .service-card .btn:hover {
+        background-color: #e3a93d;
+        color: #000;
+      }
+    </style>
+  </head>
+
+  <body id="top">
+    <header class="header" data-header>
+      <div class="container">
+        <a href="#" class="logo"></a>
+        <nav class="navbar" data-navbar>
+          <button class="close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+          <a href="#" class="logo">
+            <img
+              src="./assets/images/logo.svg"
+              width="160"
+              height="50"
+              alt="Tigerbay Logo"
+            />
+          </a>
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <a href="index.html" class="navbar-link hover-underline"
+                ><div class="separator"></div>
+                <span class="span">Home</span></a
+              >
+            </li>
+            <li class="navbar-item">
+              <a href="reservations.html" class="navbar-link hover-underline"
+                ><div class="separator"></div>
+                <span class="span">Reservations</span></a
+              >
+            </li>
+            <li class="navbar-item">
+              <a href="menus.html" class="navbar-link hover-underline"
+                ><div class="separator"></div>
+                <span class="span">Menus</span></a
+              >
+            </li>
+            <li class="navbar-item">
+              <a href="branches.html" class="navbar-link hover-underline"
+                ><div class="separator"></div>
+                <span class="span">Branches</span></a
+              >
+            </li>
+            <li class="navbar-item">
+              <a href="whatson.html" class="navbar-link hover-underline active"
+                ><div class="separator"></div>
+                <span class="span">What’s On</span></a
+              >
+            </li>
+            <li class="navbar-item">
+              <a href="contact.html" class="navbar-link hover-underline"
+                ><div class="separator"></div>
+                <span class="span">Contact</span></a
+              >
+            </li>
+            <li class="navbar-item">
+              <a href="houserules.html" class="navbar-link hover-underline"
+                ><div class="separator"></div>
+                <span class="span">House Rules</span></a
+              >
+            </li>
+          </ul>
+          <div class="text-center">
+            <p class="headline-1 navbar-title">Visit Us</p>
+            <address class="body-4">
+              Restaurant St, Delicious City, <br />London 9578, UK
+            </address>
+            <p class="body-4 navbar-text">Open: 8:00 am - 10:00 pm</p>
+            <a
+              href="mailto:hangerlane@tigerbay.co.uk"
+              class="body-4 sidebar-link"
+              >hangerlane@tigerbay.co.uk</a
+            >
+            <div class="separator"></div>
+            <p class="contact-label">Booking Request</p>
+            <a
+              href="tel:+11234567890"
+              class="body-1 contact-number hover-underline"
+              >+1 123 456 7890</a
+            >
+          </div>
+        </nav>
+        <a href="#" class="btn btn-secondary">
+          <span class="text text-1">Find A Table</span>
+          <span class="text text-2" aria-hidden="true">Find A Table</span>
+        </a>
+        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+          <span class="line line-1"></span>
+          <span class="line line-2"></span>
+          <span class="line line-3"></span>
+        </button>
+        <div class="overlay" data-nav-toggler data-overlay></div>
+      </div>
+    </header>
+
+    <section class="section food text-center" aria-label="whatson" id="whatson">
+      <div class="container">
+        <p class="section-subtitle label-2">What's On</p>
+        <h2 class="headline-1 section-title">
+          Check out our latest events and promotions. Book now to reserve your
+          spot!
+        </h2>
+
+        <ul
+          id="whatsonContainer"
+          class="grid-list"
+          style="justify-content: center; gap: 2rem; padding-bottom: 40px"
+        >
+          <li>
+            <div
+              class="card"
+              style="
+                background-color: #1e1e1e;
+                padding: 1rem;
+                border-radius: 16px;
+                max-width: 320px;
+                margin: auto;
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+                transition: transform 0.3s;
+              "
+            >
+              <figure
+                class="card-banner img-holder"
+                style="border-radius: 12px; overflow: hidden"
+              >
+                <img
+                  src="https://www.tigerbayshisha.co.uk/wp-content/uploads/2023/05/menu-img1.jpg"
+                  width="320"
+                  height="320"
+                  loading="lazy"
+                  alt="Cocktail Promo"
+                  style="width: 100%; height: 100%; object-fit: cover"
+                />
+              </figure>
+
+              <div class="card-content" style="padding-top: 1rem">
+                <p class="label-1 text-white" style="margin-bottom: 0.25rem">
+                  Testing
+                </p>
+                <p class="body-4 text-white" style="opacity: 0.8">
+                  Not valid on event days
+                </p>
+
+                <a
+                  href="/reservations"
+                  class="btn btn-primary label-2"
+                  style="margin-top: 1rem"
+                  >Book Now</a
+                >
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <footer
+      class="footer section has-bg-image text-center"
+      style="
+        background-image: url('./assets/images/footer-bg.jpg');
+        padding: 40px 0;
+      "
+    >
+      <p class="copyright">&copy; 2025 Tigerbay Shisha. All Rights Reserved.</p>
+    </footer>
+
+    <a href="#top" class="back-top-btn active" aria-label="back to top"
+      ><ion-icon name="chevron-up"></ion-icon
+    ></a>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script>
+      fetch(
+        "http://localhost:3000/data/whatson.json?ts=" + new Date().getTime()
+      )
+        .then((res) => res.json())
+        .then((promos) => {
+          const container = document.getElementById("whatsonContainer");
+          container.innerHTML = "";
+
+          promos.forEach((promo) => {
+            const li = document.createElement("li");
+            li.innerHTML = `
+          <div class="service-card">
+            <figure class="card-banner img-holder">
+              <img src="${promo.image}" alt="Promotion" class="promo-img">
+            </figure>
+            <div class="card-content">
+              <h3 class="card-title">${promo.caption}</h3>
+              <a href="reservations.html" class="btn">Book Now</a>
+            </div>
+          </div>
+        `;
+            container.appendChild(li);
+          });
+        })
+        .catch((err) => {
+          console.error("❌ Failed to load what's on:", err);
+        });
+    </script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
