@@ -403,8 +403,8 @@
 
                 <a href="#" class="has-before hover:shine">
                   <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
-                    <img src="https://res.cloudinary.com/dgpuqdwgu/image/upload/v1750526282/SK_FOOD_10_of_64_jxbuib.jpg" width="285"
-                      height="336" loading="lazy" alt="Breakfast" class="img-cover">
+                    <img src="https://res.cloudinary.com/dgpuqdwgu/image/upload/v1750526282/SK_FOOD_10_of_64_jxbuib.jpg"
+                      width="285" height="336" loading="lazy" alt="Breakfast" class="img-cover">
                   </figure>
                 </a>
 
@@ -427,8 +427,8 @@
 
                 <a href="#" class="has-before hover:shine">
                   <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
-                    <img src="https://res.cloudinary.com/dgpuqdwgu/image/upload/v1750526287/SK_FOOD_32_of_64_amk56n.jpg" width="285" height="336" loading="lazy" alt="Appetizers"
-                      class="img-cover">
+                    <img src="https://res.cloudinary.com/dgpuqdwgu/image/upload/v1750526287/SK_FOOD_32_of_64_amk56n.jpg"
+                      width="285" height="336" loading="lazy" alt="Appetizers" class="img-cover">
                   </figure>
                 </a>
 
@@ -450,8 +450,8 @@
 
                 <a href="#" class="has-before hover:shine">
                   <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
-                    <img src="https://res.cloudinary.com/dgpuqdwgu/image/upload/v1750526207/cld-sample-4.jpg" width="285" height="336" loading="lazy" alt="Drinks"
-                      class="img-cover">
+                    <img src="https://res.cloudinary.com/dgpuqdwgu/image/upload/v1750526207/cld-sample-4.jpg"
+                      width="285" height="336" loading="lazy" alt="Drinks" class="img-cover">
                   </figure>
                 </a>
 
@@ -590,8 +590,9 @@
         <div class="footer-brand has-before has-after">
 
           <a href="#" class="logo">
-            <img src="https://res.cloudinary.com/dgpuqdwgu/image/upload/v1750694125/ChatGPT_Image_Jun_23_2025_04_55_09_PM_oqyhdy.png" width="160"
-              height="50" loading="lazy" alt="grilli home">
+            <img
+              src="https://res.cloudinary.com/dgpuqdwgu/image/upload/v1750694125/ChatGPT_Image_Jun_23_2025_04_55_09_PM_oqyhdy.png"
+              width="160" height="50" loading="lazy" alt="grilli home">
           </a>
 
           <address class="body-4">
@@ -748,11 +749,15 @@
   <script>
     function closeModal() {
       const modal = document.getElementById('promo-modal');
-      if (modal) modal.remove(); // clean up
+      if (modal) modal.remove();
     }
 
     window.addEventListener("DOMContentLoaded", function () {
-      fetch("http://localhost:3000/data/popup.json?ts=" + new Date().getTime()) // prevent caching
+      const API_BASE = location.hostname.includes("localhost")
+        ? "http://localhost:3000"
+        : "https://namour-backend.onrender.com";
+
+      fetch(`${API_BASE}/data/popup.json?ts=` + new Date().getTime())
         .then(res => res.json())
         .then(data => {
           if (!data || !data.image) return;

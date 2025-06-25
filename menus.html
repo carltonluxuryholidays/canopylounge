@@ -149,23 +149,23 @@
 
     <!-- Menu Section -->
     <!-- Menu Section -->
-<section class="section service bg-black-10 text-center" aria-label="service" style="padding-top: 140px;">
-  <div class="container">
-    <p class="section-subtitle label-2">MENUS</p>
-    <p class="section-text">
-      Step into a world of flavour, comfort, and great vibes — from premium shisha to
-      mouthwatering food, we bring you the ultimate lounge experience.
-    </p>
+    <section class="section service bg-black-10 text-center" aria-label="service" style="padding-top: 140px;">
+        <div class="container">
+            <p class="section-subtitle label-2">MENUS</p>
+            <p class="section-text">
+                Step into a world of flavour, comfort, and great vibes — from premium shisha to
+                mouthwatering food, we bring you the ultimate lounge experience.
+            </p>
 
-    <!-- ✅ Dynamic menu container -->
-    <ul class="grid-list" id="menuContainer"></ul>
+            <!-- ✅ Dynamic menu container -->
+            <ul class="grid-list" id="menuContainer"></ul>
 
-    <img src="./assets/images/shape-1.png" width="246" height="412" loading="lazy" alt="shape"
-         class="shape shape-1 move-anim">
-    <img src="./assets/images/shape-2.png" width="343" height="345" loading="lazy" alt="shape"
-         class="shape shape-2 move-anim">
-  </div>
-</section>
+            <img src="./assets/images/shape-1.png" width="246" height="412" loading="lazy" alt="shape"
+                class="shape shape-1 move-anim">
+            <img src="./assets/images/shape-2.png" width="343" height="345" loading="lazy" alt="shape"
+                class="shape shape-2 move-anim">
+        </div>
+    </section>
 
     <!-- Delivery Partners Section -->
     <section class="section text-center" style="padding: 3rem 1rem; background-color: #0d0d0d;">
@@ -201,14 +201,18 @@
 
     <!-- Scroll Fix -->
     <script>
-  fetch('http://localhost:3000/data/menus.json?ts=' + new Date().getTime())
-    .then(res => res.json())
-    .then(menus => {
-      const container = document.getElementById('menuContainer');
-      container.innerHTML = ""; // Clear previous content
-      menus.forEach(menu => {
-        const li = document.createElement('li');
-        li.innerHTML = `
+        const API_BASE = location.hostname.includes("localhost")
+            ? "http://localhost:3000"
+            : "https://namour-backend.onrender.com";
+
+        fetch(`${API_BASE}/data/menus.json?ts=` + new Date().getTime())
+            .then(res => res.json())
+            .then(menus => {
+                const container = document.getElementById('menuContainer');
+                container.innerHTML = ""; // Clear previous content
+                menus.forEach(menu => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `
           <div class="service-card">
             <a href="${menu.pdfLink}" class="has-before hover:shine" target="_blank">
               <figure class="card-banner img-holder">
@@ -222,13 +226,13 @@
             </div>
           </div>
         `;
-        container.appendChild(li);
-      });
-    })
-    .catch(err => {
-      console.error("❌ Failed to load menus:", err);
-    });
-</script>
+                    container.appendChild(li);
+                });
+            })
+            .catch(err => {
+                console.error("❌ Failed to load menus:", err);
+            });
+    </script>
 </body>
 
 </html>

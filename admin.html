@@ -136,7 +136,7 @@
             link: document.getElementById("promoLink").value || "#",
           };
 
-          fetch("http://localhost:3000/api/whatson", {
+          fetch("https://namour-backend.onrender.com/api/whatson", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(promo),
@@ -149,7 +149,7 @@
         });
 
       function loadWhatsOn() {
-        fetch("http://localhost:3000/data/whatson.json")
+        fetch("https://namour-backend.onrender.com/data/whatson.json")
           .then((res) => res.json())
           .then((data) => {
             const list = document.getElementById("promotionList");
@@ -171,7 +171,7 @@
       }
 
       function deleteWhatsOn(index) {
-        fetch(`http://localhost:3000/api/whatson/${index}`, {
+        fetch(`https://namour-backend.onrender.com/api/whatson/${index}`, {
           method: "DELETE",
         }).then(() => loadWhatsOn());
       }
@@ -179,7 +179,7 @@
       // Load on page load
       loadWhatsOn();
       function loadMenuInputs() {
-        fetch("http://localhost:3000/data/menus.json")
+        fetch("https://namour-backend.onrender.com/data/menus.json")
           .then((res) => res.json())
           .then((menus) => {
             const container = document.getElementById("menuInputs");
@@ -201,7 +201,7 @@
       }
 
       function loadPopup() {
-        fetch("http://localhost:3000/data/popup.json")
+        fetch("https://namour-backend.onrender.com/data/popup.json")
           .then((res) => res.json())
           .then((data) => {
             document.getElementById("popupImage").value = data.image || "";
@@ -224,7 +224,7 @@
               pdfLink: div.querySelector("input[name='pdfLink']").value,
             };
           });
-          fetch("http://localhost:3000/api/update-menus", {
+          fetch("https://namour-backend.onrender.com/api/update-menus", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(updated),
@@ -239,26 +239,11 @@
             image: document.getElementById("popupImage").value,
             link: document.getElementById("popupLink").value,
           };
-          fetch("http://localhost:3000/api/update-popup", {
+          fetch("https://namour-backend.onrender.com/api/update-popup", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data),
           }).then(() => alert("Popup updated"));
-        });
-
-      document
-        .getElementById("whatsonForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-          const data = {
-            image: document.getElementById("promoImage").value,
-            caption: document.getElementById("promoCaption").value,
-          };
-          fetch("http://localhost:3000/api/update-whatson", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(data),
-          }).then(() => alert("Promotion added"));
         });
     </script>
   </body>
