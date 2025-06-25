@@ -88,6 +88,11 @@ app.delete("/api/whatson/:index", (req, res) => {
   });
 });
 
+// ✅ Default route to avoid "Cannot GET /"
+app.get("/", (req, res) => {
+  res.send("Namour backend is live!");
+});
+
 app.listen(PORT, () => {
   console.log(`✅ Admin backend running at http://localhost:${PORT}`);
 });
