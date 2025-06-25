@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 // ✅ Serve frontend (HTML, CSS, JS)
-app.use(express.static(path.join(__dirname, "../grilli-master")));
+app.use(express.static(path.join(__dirname, "..")));
 
 // ✅ Serve data files
 app.use("/data", express.static(path.join(__dirname, "../data")));
