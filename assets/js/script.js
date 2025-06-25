@@ -34,6 +34,17 @@ const toggleNavbar = function () {
 
 addEventOnElements(navTogglers, "click", toggleNavbar);
 
+// Toggle dropdown for Branches in mobile view
+document.querySelectorAll('.navbar-item.dropdown > a').forEach(item => {
+  item.addEventListener('click', function (e) {
+    if (window.innerWidth <= 992) {
+      e.preventDefault();
+      this.parentElement.classList.toggle('active');
+    }
+  });
+});
+
+
 /**
  * HEADER & BACK TOP BTN
  */

@@ -114,6 +114,59 @@
     transform: scale(1.1);
   }
 
+  /* ---------- Branches Dropdown Menu ---------- */
+
+  /* Desktop dropdown */
+  .navbar-item.dropdown {
+    position: relative;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #111;
+    display: none;
+    flex-direction: column;
+    min-width: 160px;
+    z-index: 999;
+    border: 1px solid #333;
+  }
+
+  .dropdown-menu li a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-menu li a:hover {
+    background-color: #333;
+  }
+
+  .navbar-item.dropdown:hover .dropdown-menu {
+    display: flex;
+  }
+
+  /* Mobile dropdown toggle */
+  @media (max-width: 992px) {
+    .dropdown-menu {
+      position: static;
+      display: none;
+      background-color: transparent;
+      border: none;
+    }
+
+    .navbar-item.dropdown.active .dropdown-menu {
+      display: flex;
+    }
+
+    .dropdown-menu li a {
+      color: white;
+      padding-left: 20px;
+    }
+  }
+
 
   /**
    * TYPOGRAPHY
