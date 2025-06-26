@@ -116,7 +116,7 @@
       <a href="#" class="logo">
         <img
           src="https://res.cloudinary.com/dgpuqdwgu/image/upload/v1750694125/ChatGPT_Image_Jun_23_2025_04_55_09_PM_oqyhdy.png"
-          width="200" height="140" alt="Namour - Home">
+          width="230" height="400" alt="Namour - Home">
       </a>
 
       <nav class="navbar" data-navbar>
@@ -128,7 +128,7 @@
         <a href="#" class="logo">
           <img
             src="https://res.cloudinary.com/dgpuqdwgu/image/upload/v1750694125/ChatGPT_Image_Jun_23_2025_04_55_09_PM_oqyhdy.png"
-            width="160" height="50" alt="Namour- Home">
+            width="160" height="150" alt="Namour- Home">
         </a>
 
         <ul class="navbar-list">
@@ -328,34 +328,28 @@
           <img src="./assets/images/hero-icon.png" width="48" height="48" alt="booking icon">
 
           <span class="label-2 text-center span">Book A Table</span>
-        </a>
+        </a> 
 
       </section> -->
 
-      <section class="hero text-center" aria-label="home" id="home"
-        style="position: relative; width: 100vw; height: 100vh; overflow: hidden; margin: 0; padding: 0;">
-
-        <!-- Fullscreen Background Video -->
-        <video autoplay muted loop playsinline
-          style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: -1;">
+      <!-- Wrapper to push hero below header -->
+      <section class="hero text-center" aria-label="home" id="home">
+        <!-- Background Video -->
+        <video autoplay muted loop playsinline>
           <source src="https://res.cloudinary.com/dgpuqdwgu/video/upload/v1750694037/HL_LANDING_PAGE_2_hg93ja.mp4"
             type="video/mp4">
           Your browser does not support the video tag.
         </video>
 
         <!-- Content Overlay -->
-        <div
-          style="position: relative; z-index: 1; height: 100%; width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; padding: 2rem;">
+        <div class="hero-overlay">
           <p class="label-2 section-subtitle" style="color: #f9c06a;">Amazing & Delicious</p>
-
           <h1 class="display-1 hero-title" style="font-size: 60px; max-width: 800px; line-height: 1.2; margin: 0 auto;">
             Where every flavor <br> tells a story
           </h1>
-
           <p class="body-2 hero-text" style="font-size: 20px; margin: 1rem 0 2rem;">
             Come with family & feel the joy of mouthwatering food
           </p>
-
           <a href="menus.html" class="btn btn-primary">
             <span class="text text-1">View Our Menu</span>
             <span class="text text-2" aria-hidden="true">View Our Menu</span>
@@ -370,57 +364,58 @@
         </a>
       </section>
 
-
       <!-- 
         - #ABOUT
       -->
-      <section class="section about" id="about" style="padding-block: 40px;">
+      <section class="section about" id="about" style="padding: 40px 0; margin-top: 0; background-color: #1c1c1c;">
         <div class="container"
           style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 2rem;">
 
           <!-- Left: Content Box aligned to image height -->
-          <div
-            style="flex: 1; min-width: 300px; max-width: 500px; display: flex; flex-direction: column; justify-content: center; height: 570px;">
+          <div style="
+      flex: 1;
+      min-width: 300px;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    ">
 
             <!-- Subtitle -->
             <p class="label-2 section-subtitle"
-              style="position: relative; top: -25px; font-size: 18px; color: #d4a762; text-align: center; margin-bottom: 0;">
+              style="font-size: 18px; color: #d4a762; text-align: center; margin-bottom: 0;">
               NAMOUR
             </p>
 
-            <!-- Divider (optional) -->
-            <div style="margin: -20px auto 4px;">
-              <!-- <img src="./assets/images/divider.svg" alt="divider" style="height: 12px;"> -->
+            <!-- Divider -->
+            <div style="margin: -10px auto 4px;">
+              <!-- Optional divider graphic -->
             </div>
 
             <!-- Title -->
-            <h2 class="headline-1 section-title" style="font-size: 36px; margin: -5px 0 16px; text-align: center;">
+            <h2 class="headline-1 section-title" style="font-size: 32px; margin: 0 0 16px; text-align: center;">
               LEBANESE CHARCOAL GRILL
             </h2>
 
             <!-- Paragraph Text -->
-            <p class="section-text" style="margin-bottom: 25px; line-height: 1.6; font-size: 16px;">
+            <p class="section-text" style="margin-bottom: 0; line-height: 1.6; font-size: 16px; text-align: center;">
               From the first puff to the last bite, every moment at Tigerbay is crafted to leave a lasting impression.
-              Whether you're enjoying our signature shisha blends or indulging in our delicious food, you're not just
-              tasting
-              flavours — you're experiencing a vibe, a culture, a story worth sharing.
+              Whether
+              you're enjoying our signature shisha blends or indulging in our delicious food, you're not just tasting
+              flavours —
+              you're experiencing a vibe, a culture, a story worth sharing.
             </p>
-
-            <!-- Contact -->
-            <!-- <div class="contact-label" style="margin-bottom: 6px;">Book Through Call</div> -->
-            <!-- <a href="tel:+804001234567" class="body-1 contact-number hover-underline"
-              style="color: #D4A762; font-size: 20px;">+44 123 4567</a> -->
 
           </div>
 
           <!-- Right: Image -->
-          <figure class="about-banner" style="flex: 1; min-width: 300px; max-width: 570px;">
-            <img src="https://res.cloudinary.com/dgpuqdwgu/image/upload/v1750526280/DSC00501_nqszzd.jpg" width="570"
-              height="570" loading="lazy" alt="about banner" class="w-100" data-parallax-item data-parallax-speed="1">
-
+          <figure class="about-banner"
+            style="flex: 1; min-width: 300px; max-width: 500px; display: flex; justify-content: center; margin-top: 80px;">
+            <img src="https://res.cloudinary.com/dgpuqdwgu/image/upload/v1750526280/DSC00501_nqszzd.jpg" width="500"
+              height="500" loading="lazy" alt="about banner" class="w-100" style="max-width: 100%; height: auto;">
           </figure>
 
-          <!-- Decoration (optional) -->
+          <!-- Decoration -->
           <img src="./assets/images/shape-3.png" width="197" height="194" loading="lazy" alt="" class="shape">
         </div>
       </section>

@@ -38,7 +38,7 @@
   --black-alpha-15: hsla(0, 0%, 0%, 0.15);
 
   /**
-   * GRADIENT COLOR
+   * GRADIENT COLOR 
    */
 
   --loading-text-gradient: linear-gradient(90deg, transparent 0% 16.66%, var(--smoky-black-3) 33.33% 50%, transparent 66.66% 75%);
@@ -828,15 +828,16 @@ body.nav-active {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: transparent;
-  padding-block: 40px;
+  /* background-color: transparent; */
+  background-color: #000 !important;
+  padding-block: 0px;
   z-index: 4;
   border-block-end: 1px solid transparent;
   transition: var(--transition-1);
 }
 
 .header.active {
-  padding-block: 20px;
+  padding-block: 0px;
   background-color: var(--eerie-black-4);
   border-color: var(--black-alpha-15);
 }
@@ -847,7 +848,7 @@ body.nav-active {
 }
 
 .header .container {
-  padding-inline: 20px;
+  padding-inline: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1079,13 +1080,38 @@ body.nav-active {
 
 .hero {
   position: relative;
-  padding-block: 120px;
-  min-height: 100vh;
+  padding-block: 0;
+  min-height: 80vh; /* Or 85vh */
   overflow: hidden;
   z-index: 1;
+  margin-top: 100px; /* Match header height */
 }
 
-.hero .slider-item {
+
+.hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 2rem;
+}
+
+/* .hero .slider-item {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1099,14 +1125,32 @@ body.nav-active {
   visibility: hidden;
   transition: var(--transition-3);
   z-index: 1;
+} */
+
+.hero .slider-item {
+  position: relative; /* previously absolute */
+  top: unset;
+  left: unset;
+  transform: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-block-start: 100px;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-3);
+  z-index: 1;
+  height: 100%;
 }
+
 
 .hero .slider-item.active {
   opacity: 1;
   visibility: visible;
 }
 
-.hero .slider-bg {
+/* .hero .slider-bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -1116,7 +1160,21 @@ body.nav-active {
   pointer-events: none;
   user-select: none;
   z-index: -1;
+} */
+
+.hero .slider-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* make sure video scales nicely */
+  pointer-events: none;
+  user-select: none;
+  z-index: -1;
 }
+
 
 .hero .slider-item.active .slider-bg {
   animation: smoothScale 7s linear forwards;
@@ -1902,6 +1960,7 @@ textarea.input-field {
     padding-block: 10px;
     border-block-end: 1px solid var(--white-alpha-20);
     z-index: 4;
+    background-color: #000;
     transition: var(--transition-1);
   }
 
