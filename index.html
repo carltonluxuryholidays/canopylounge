@@ -235,7 +235,7 @@
         - #HERO
       -->
 
-      <section class="hero text-center" aria-label="home" id="home">
+      <!-- <section class="hero text-center" aria-label="home" id="home">
 
         <ul class="hero-slider" data-hero-slider>
 
@@ -330,57 +330,98 @@
           <span class="label-2 text-center span">Book A Table</span>
         </a>
 
+      </section> -->
+
+      <section class="hero text-center" aria-label="home" id="home"
+        style="position: relative; width: 100vw; height: 100vh; overflow: hidden; margin: 0; padding: 0;">
+
+        <!-- Fullscreen Background Video -->
+        <video autoplay muted loop playsinline
+          style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: -1;">
+          <source src="https://res.cloudinary.com/dgpuqdwgu/video/upload/v1750694037/HL_LANDING_PAGE_2_hg93ja.mp4"
+            type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+        <!-- Content Overlay -->
+        <div
+          style="position: relative; z-index: 1; height: 100%; width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; padding: 2rem;">
+          <p class="label-2 section-subtitle" style="color: #f9c06a;">Amazing & Delicious</p>
+
+          <h1 class="display-1 hero-title" style="font-size: 60px; max-width: 800px; line-height: 1.2; margin: 0 auto;">
+            Where every flavor <br> tells a story
+          </h1>
+
+          <p class="body-2 hero-text" style="font-size: 20px; margin: 1rem 0 2rem;">
+            Come with family & feel the joy of mouthwatering food
+          </p>
+
+          <a href="menus.html" class="btn btn-primary">
+            <span class="text text-1">View Our Menu</span>
+            <span class="text text-2" aria-hidden="true">View Our Menu</span>
+          </a>
+        </div>
+
+        <!-- Book A Table Button -->
+        <a href="reservations.html" class="hero-btn has-after"
+          style="position: absolute; bottom: 2rem; right: 2rem; z-index: 2;">
+          <img src="./assets/images/hero-icon.png" width="48" height="48" alt="booking icon">
+          <span class="label-2 text-center span">Book A Table</span>
+        </a>
       </section>
+
 
       <!-- 
         - #ABOUT
       -->
+      <section class="section about" id="about" style="padding-block: 40px;">
+        <div class="container"
+          style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 2rem;">
 
-      <section class="section about text-center" aria-labelledby="about-label" id="about">
-        <div class="container">
+          <!-- Left: Content Box aligned to image height -->
+          <div
+            style="flex: 1; min-width: 300px; max-width: 500px; display: flex; flex-direction: column; justify-content: center; height: 570px;">
 
-          <div class="about-content">
-
-            <p class="label-2 section-subtitle" id="about-label">Our Story</p>
-
-            <h2 class="headline-1 section-title">Every Flavour Tells a Story</h2>
-
-            <p class="section-text">
-              From the first puff to the last bite, every moment at Tigerbay is crafted to leave a lasting impression.
-              Whether you're enjoying our signature shisha blends or indulging in our delicious food, you're not just
-              tasting flavours you're experiencing a vibe, a culture, a story worth sharing.
+            <!-- Subtitle -->
+            <p class="label-2 section-subtitle"
+              style="position: relative; top: -25px; font-size: 18px; color: #d4a762; text-align: center; margin-bottom: 0;">
+              NAMOUR
             </p>
 
-            <div class="contact-label">Book Through Call</div>
+            <!-- Divider (optional) -->
+            <div style="margin: -20px auto 4px;">
+              <!-- <img src="./assets/images/divider.svg" alt="divider" style="height: 12px;"> -->
+            </div>
 
-            <a href="tel:+804001234567" class="body-1 contact-number hover-underline">+44 123 4567</a>
+            <!-- Title -->
+            <h2 class="headline-1 section-title" style="font-size: 36px; margin: -5px 0 16px; text-align: center;">
+              LEBANESE CHARCOAL GRILL
+            </h2>
 
-            <!-- <a href="#" class="btn btn-primary">
-              <span class="text text-1">Read More</span>
+            <!-- Paragraph Text -->
+            <p class="section-text" style="margin-bottom: 25px; line-height: 1.6; font-size: 16px;">
+              From the first puff to the last bite, every moment at Tigerbay is crafted to leave a lasting impression.
+              Whether you're enjoying our signature shisha blends or indulging in our delicious food, you're not just
+              tasting
+              flavours — you're experiencing a vibe, a culture, a story worth sharing.
+            </p>
 
-              <span class="text text-2" aria-hidden="true">Read More</span>
-            </a> -->
+            <!-- Contact -->
+            <!-- <div class="contact-label" style="margin-bottom: 6px;">Book Through Call</div> -->
+            <!-- <a href="tel:+804001234567" class="body-1 contact-number hover-underline"
+              style="color: #D4A762; font-size: 20px;">+44 123 4567</a> -->
 
           </div>
 
-          <figure class="about-banner">
-
+          <!-- Right: Image -->
+          <figure class="about-banner" style="flex: 1; min-width: 300px; max-width: 570px;">
             <img src="https://res.cloudinary.com/dgpuqdwgu/image/upload/v1750526280/DSC00501_nqszzd.jpg" width="570"
               height="570" loading="lazy" alt="about banner" class="w-100" data-parallax-item data-parallax-speed="1">
 
-            <!-- <div class="abs-img abs-img-1 has-before" data-parallax-item data-parallax-speed="1.75">
-                <img src="https://res.cloudinary.com/dgpuqdwgu/image/upload/v1750526280/DSC09999_myiuw8.jpg" width="285"
-                  height="285" loading="lazy" alt="" class="w-100">
-              </div> -->
-
-            <div class="abs-img abs-img-2 has-before">
-              <img src="./assets/images/badge-2.png" width="133" height="134" loading="lazy" alt="">
-            </div>
-
           </figure>
 
+          <!-- Decoration (optional) -->
           <img src="./assets/images/shape-3.png" width="197" height="194" loading="lazy" alt="" class="shape">
-
         </div>
       </section>
 
@@ -492,87 +533,78 @@
 
       <section class="section event bg-black-10" aria-label="event">
         <div class="container">
-
           <p class="section-subtitle label-2 text-center">Instagram</p>
-          <!-- <h2 class="section-title headline-1 text-center">Follow Us</h2> -->
 
-          <ul class="grid-list">
+          <div id="instagram-slider" style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;"></div>
 
-            <li>
-              <a href="https://www.instagram.com/yourprofile3" target="_blank" class="instagram-card">
-                <img
-                  src="https://www.sherekhanrestaurant.com/wp-content/uploads/sb-instagram-feed-images/468464448_18013823948653596_4377119567123458134_nfull.webp"
-                  width="350" height="450" loading="lazy" alt="Instagram post 3" class="post-img">
-
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram logo"
-                  class="instagram-icon">
-              </a>
-            </li>
-
-            <li>
-              <a href="https://www.instagram.com/yourprofile3" target="_blank" class="instagram-card">
-                <img
-                  src="https://www.sherekhanrestaurant.com/wp-content/uploads/sb-instagram-feed-images/467550791_18012689837653596_1560467926149778757_nfull.webp"
-                  width="350" height="450" loading="lazy" alt="Instagram post 3" class="post-img">
-
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram logo"
-                  class="instagram-icon">
-              </a>
-            </li>
-
-            <li>
-              <a href="https://www.instagram.com/yourprofile3" target="_blank" class="instagram-card">
-                <img
-                  src="https://www.sherekhanrestaurant.com/wp-content/uploads/sb-instagram-feed-images/465960593_427126317100475_1211684192189083049_nfull.webp"
-                  width="350" height="450" loading="lazy" alt="Instagram post 3" class="post-img">
-
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram logo"
-                  class="instagram-icon">
-              </a>
-            </li>
-
-            <li>
-              <a href="https://www.instagram.com/yourprofile3" target="_blank" class="instagram-card">
-                <img
-                  src="https://www.sherekhanrestaurant.com/wp-content/uploads/sb-instagram-feed-images/464631006_1969634086843596_3266156688759288356_nfull.webp"
-                  width="350" height="450" loading="lazy" alt="Instagram post 3" class="post-img">
-
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram logo"
-                  class="instagram-icon">
-              </a>
-            </li>
-
-            <li>
-              <a href="https://www.instagram.com/yourprofile3" target="_blank" class="instagram-card">
-                <img
-                  src="https://www.sherekhanrestaurant.com/wp-content/uploads/sb-instagram-feed-images/465861371_866960835585367_5932537613669816100_nfull.webp"
-                  width="350" height="450" loading="lazy" alt="Instagram post 3" class="post-img">
-
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram logo"
-                  class="instagram-icon">
-              </a>
-            </li>
-
-            <li>
-              <a href="https://www.instagram.com/yourprofile3" target="_blank" class="instagram-card">
-                <img
-                  src="https://www.sherekhanrestaurant.com/wp-content/uploads/sb-instagram-feed-images/466569805_18011816939653596_5022520566957170560_nfull.webp"
-                  width="350" height="450" loading="lazy" alt="Instagram post 3" class="post-img">
-
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram logo"
-                  class="instagram-icon">
-              </a>
-            </li>
-
-          </ul>
-
-          <a href="https://www.instagram.com/namour" target="_blank" class="btn btn-primary">
+          <a href="https://www.instagram.com/namour" target="_blank" class="btn btn-primary" style="margin-top: 2rem;">
             <span class="text text-1">Follow Us on Instagram</span>
             <span class="text text-2" aria-hidden="true">@Namour</span>
           </a>
-
         </div>
       </section>
+
+      <script>
+        const images = [
+          {
+            link: "https://www.instagram.com/yourprofile3",
+            src: "https://www.sherekhanrestaurant.com/wp-content/uploads/sb-instagram-feed-images/468464448_18013823948653596_4377119567123458134_nfull.webp"
+          },
+          {
+            link: "https://www.instagram.com/yourprofile3",
+            src: "https://www.sherekhanrestaurant.com/wp-content/uploads/sb-instagram-feed-images/467550791_18012689837653596_1560467926149778757_nfull.webp"
+          },
+          {
+            link: "https://www.instagram.com/yourprofile3",
+            src: "https://www.sherekhanrestaurant.com/wp-content/uploads/sb-instagram-feed-images/465960593_427126317100475_1211684192189083049_nfull.webp"
+          },
+          {
+            link: "https://www.instagram.com/yourprofile3",
+            src: "https://www.sherekhanrestaurant.com/wp-content/uploads/sb-instagram-feed-images/464631006_1969634086843596_3266156688759288356_nfull.webp"
+          },
+          {
+            link: "https://www.instagram.com/yourprofile3",
+            src: "https://www.sherekhanrestaurant.com/wp-content/uploads/sb-instagram-feed-images/465861371_866960835585367_5932537613669816100_nfull.webp"
+          },
+          {
+            link: "https://www.instagram.com/yourprofile3",
+            src: "https://www.sherekhanrestaurant.com/wp-content/uploads/sb-instagram-feed-images/466569805_18011816939653596_5022520566957170560_nfull.webp"
+          }
+        ];
+
+        let currentIndex = 0;
+
+        function renderSliderImages() {
+          const container = document.getElementById("instagram-slider");
+          container.innerHTML = "";
+
+          const visibleImages = images.slice(currentIndex, currentIndex + 3);
+
+          visibleImages.forEach(({ link, src }) => {
+            const card = document.createElement("a");
+            card.href = link;
+            card.target = "_blank";
+            card.className = "instagram-card";
+            card.style.position = "relative";
+
+            card.innerHTML = `
+        <img src="${src}" alt="Instagram post" class="post-img" width="350" height="450" style="border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.5);" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram logo"
+          style="position: absolute; bottom: 12px; right: 12px; width: 28px; height: 28px;" />
+      `;
+
+            container.appendChild(card);
+          });
+        }
+
+        function rotateSlider() {
+          currentIndex = (currentIndex + 3) % images.length;
+          renderSliderImages();
+        }
+
+        renderSliderImages(); // initial call
+        setInterval(rotateSlider, 3000); // rotate every 3 seconds
+      </script>
 
     </article>
   </main>
