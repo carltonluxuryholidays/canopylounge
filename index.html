@@ -357,11 +357,11 @@
         </div>
 
         <!-- Book A Table Button -->
-        <a href="reservations.html" class="hero-btn has-after"
+        <!-- <a href="reservations.html" class="hero-btn has-after"
           style="position: absolute; bottom: 2rem; right: 2rem; z-index: 2;">
           <img src="./assets/images/hero-icon.png" width="48" height="48" alt="booking icon">
           <span class="label-2 text-center span">Book A Table</span>
-        </a>
+        </a> -->
       </section>
 
       <!-- 
@@ -543,27 +543,27 @@
       <script>
         const images = [
           {
-            link: "https://www.instagram.com/yourprofile3",
+            link: "https://www.instagram.com/namour_restaurant/?igsh=dzd5d3VkcDF1d2Nu&utm_source=qr#",
             src: "https://www.sherekhanrestaurant.com/wp-content/uploads/sb-instagram-feed-images/468464448_18013823948653596_4377119567123458134_nfull.webp"
           },
           {
-            link: "https://www.instagram.com/yourprofile3",
+            link: "https://www.instagram.com/namour_restaurant/?igsh=dzd5d3VkcDF1d2Nu&utm_source=qr#",
             src: "https://www.sherekhanrestaurant.com/wp-content/uploads/sb-instagram-feed-images/467550791_18012689837653596_1560467926149778757_nfull.webp"
           },
           {
-            link: "https://www.instagram.com/yourprofile3",
+            link: "https://www.instagram.com/namour_restaurant/?igsh=dzd5d3VkcDF1d2Nu&utm_source=qr#",
             src: "https://www.sherekhanrestaurant.com/wp-content/uploads/sb-instagram-feed-images/465960593_427126317100475_1211684192189083049_nfull.webp"
           },
           {
-            link: "https://www.instagram.com/yourprofile3",
+            link: "https://www.instagram.com/namour_restaurant/?igsh=dzd5d3VkcDF1d2Nu&utm_source=qr#",
             src: "https://www.sherekhanrestaurant.com/wp-content/uploads/sb-instagram-feed-images/464631006_1969634086843596_3266156688759288356_nfull.webp"
           },
           {
-            link: "https://www.instagram.com/yourprofile3",
+            link: "https://www.instagram.com/namour_restaurant/?igsh=dzd5d3VkcDF1d2Nu&utm_source=qr#",
             src: "https://www.sherekhanrestaurant.com/wp-content/uploads/sb-instagram-feed-images/465861371_866960835585367_5932537613669816100_nfull.webp"
           },
           {
-            link: "https://www.instagram.com/yourprofile3",
+            link: "https://www.instagram.com/namour_restaurant/?igsh=dzd5d3VkcDF1d2Nu&utm_source=qr#",
             src: "https://www.sherekhanrestaurant.com/wp-content/uploads/sb-instagram-feed-images/466569805_18011816939653596_5022520566957170560_nfull.webp"
           }
         ];
@@ -757,14 +757,14 @@
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
   <!-- Pop-up Modal -->
-  <div id="promo-modal" style="display:none;" class="modal-overlay">
+  <!-- <div id="promo-modal" style="display:none;" class="modal-overlay">
     <div class="modal-content">
       <button class="modal-close" onclick="closeModal()">×</button>
       <img src="https://www.tigerbayshisha.co.uk/wp-content/uploads/2025/06/USYK-VS-DUBOIS-819x1024.jpg" alt="Promo"
         class="modal-image">
       <a href="reservations.html" class="modal-button">Book Now</a>
     </div>
-  </div>
+  </div> -->
   <!-- <script>
     // Show modal after delay
     window.addEventListener('DOMContentLoaded', function () {
@@ -778,97 +778,6 @@
       document.getElementById('promo-modal').style.display = 'none';
     }
   </script> -->
-  <script>
-    function closeModal() {
-      const modal = document.getElementById('promo-modal');
-      if (modal) modal.remove();
-    }
-
-    window.addEventListener("DOMContentLoaded", function () {
-      const API_BASE = location.hostname.includes("localhost")
-        ? "http://localhost:3000"
-        : "https://namour-backend.onrender.com";
-
-      fetch(`${API_BASE}/data/popup.json?ts=` + new Date().getTime())
-        .then(res => res.json())
-        .then(data => {
-          if (!data || !data.image) return;
-
-          const modal = document.createElement('div');
-          modal.id = 'promo-modal';
-          modal.style.cssText = `
-          position: fixed;
-          top: 0; left: 0;
-          width: 100vw; height: 100vh;
-          background-color: rgba(0,0,0,0.8);
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          z-index: 9999;
-        `;
-
-          modal.innerHTML = `
-          <div style="
-            position: relative;
-            width: 90%;
-            max-width: 420px;
-            background: white;
-            border: 4px solid #ffc107;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-            overflow: hidden;
-            text-align: center;
-          ">
-
-            <button onclick="closeModal()" style="
-              position: absolute;
-              top: 8px;
-              right: 8px;
-              background-color: #ffc107;
-              color: black;
-              border: none;
-              border-radius: 50%;
-              width: 32px;
-              height: 32px;
-              font-size: 18px;
-              font-weight: bold;
-              cursor: pointer;
-              z-index: 10;
-            ">×</button>
-
-            <img src="${data.image}" alt="Popup" style="
-              width: 100%;
-              height: auto;
-              display: block;
-            " />
-
-            <div style="padding: 1rem;">
-              <a href="${data.link || '#'}" target="_blank" style="
-                display: inline-block;
-                background-color: #ffc107;
-                color: black;
-                font-weight: bold;
-                padding: 10px 24px;
-                border-radius: 6px;
-                text-decoration: none;
-                font-size: 1rem;
-                transition: background 0.3s;
-              " onmouseover="this.style.backgroundColor='#e0a800'" onmouseout="this.style.backgroundColor='#ffc107'">
-                Book Now
-              </a>
-            </div>
-          </div>
-        `;
-
-          document.body.appendChild(modal);
-
-          setTimeout(() => {
-            modal.style.display = 'flex';
-          }, 500);
-        })
-        .catch(err => console.error("Popup fetch failed:", err));
-    });
-  </script>
 
 </body>
 

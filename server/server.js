@@ -28,16 +28,16 @@ app.post("/api/update-menus", (req, res) => {
 });
 
 // ✅ Save Popup
-app.post("/api/update-popup", (req, res) => {
-  const popupPath = path.join(__dirname, "../data/popup.json");
-  fs.writeFile(popupPath, JSON.stringify(req.body, null, 2), (err) => {
-    if (err) {
-      console.error("❌ Error writing popup.json:", err);
-      return res.status(500).send("Error updating popup");
-    }
-    res.send("Popup updated");
-  });
-});
+// app.post("/api/update-popup", (req, res) => {
+//   const popupPath = path.join(__dirname, "../data/popup.json");
+//   fs.writeFile(popupPath, JSON.stringify(req.body, null, 2), (err) => {
+//     if (err) {
+//       console.error("❌ Error writing popup.json:", err);
+//       return res.status(500).send("Error updating popup");
+//     }
+//     res.send("Popup updated");
+//   });
+// });
 
 // ✅ GET What's On
 app.get("/data/whatson.json", (req, res) => {
