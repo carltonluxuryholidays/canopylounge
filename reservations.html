@@ -196,70 +196,123 @@
         width: 90%;
       }
     }
+
+    .desktop-gap-fix {
+      height: 55px;
+      /* Adjust height if needed */
+      background-color: #000;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .desktop-gap-fix {
+        display: none;
+      }
+    }
   </style>
 </head>
 
 <body id="top">
-  <!-- ✅ Header copied from index.html exactly -->
+  <div class="desktop-gap-fix"></div>
+
+
   <header class="header" data-header>
     <div class="container">
+
       <a href="#" class="logo">
         <img
           src="https://res.cloudinary.com/dgpuqdwgu/image/upload/v1750694125/ChatGPT_Image_Jun_23_2025_04_55_09_PM_oqyhdy.png"
-          width="160" height="50" alt="Tigerbay Logo">
+          width="230" height="400" alt="Namour - Home">
       </a>
 
       <nav class="navbar" data-navbar>
+
         <button class="close-btn" aria-label="close menu" data-nav-toggler>
           <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
         </button>
 
+        <a href="#" class="logo">
+          <img
+            src="https://res.cloudinary.com/dgpuqdwgu/image/upload/v1750694125/ChatGPT_Image_Jun_23_2025_04_55_09_PM_oqyhdy.png"
+            width="160" height="150" alt="Namour - Home">
+        </a>
+
         <ul class="navbar-list">
+
           <li class="navbar-item"><a href="index.html" class="navbar-link hover-underline">
               <div class="separator"></div><span class="span">Home</span>
             </a></li>
-          <li class="navbar-item"><a href="reservations.html" class="navbar-link hover-underline active">
+
+          <li class="navbar-item"><a href="reservations.html" class="navbar-link hover-underline">
               <div class="separator"></div><span class="span">Reservations</span>
             </a></li>
+
           <li class="navbar-item"><a href="menus.html" class="navbar-link hover-underline">
               <div class="separator"></div><span class="span">Menus</span>
             </a></li>
+
           <li class="navbar-item dropdown">
             <a href="#" class="navbar-link hover-underline">
-              <div class="separator"></div>
-              <span class="span">Branches</span>
+              <div class="separator"></div><span class="span">Branches</span>
             </a>
             <ul class="dropdown-menu">
               <li><a href="https://www.carltonlounge.co.uk/" target="_blank">Kingsbury</a></li>
               <li><a href="https://www.sherekhanrestaurant.com/" target="_blank">Enfield</a></li>
             </ul>
           </li>
+
           <li class="navbar-item"><a href="whatson.html" class="navbar-link hover-underline">
               <div class="separator"></div><span class="span">What’s On</span>
             </a></li>
+
           <li class="navbar-item"><a href="contact.html" class="navbar-link hover-underline">
               <div class="separator"></div><span class="span">Contact</span>
             </a></li>
-          <li class="navbar-item"><a href="houserules.html" class="navbar-link hover-underline">
+
+          <!-- <li class="navbar-item"><a href="houserules.html" class="navbar-link hover-underline">
               <div class="separator"></div><span class="span">House Rules</span>
-            </a></li>
+            </a></li> -->
+
         </ul>
 
-        <div class="overlay" data-nav-toggler data-overlay></div>
+        <div class="text-center">
+          <p class="headline-1 navbar-title">Visit Us</p>
+          <address class="body-4">
+            Restaurant St, Delicious City, <br>London 9578, UK
+          </address>
+          <p class="body-4 navbar-text">Open: 9.30 am - 2.30pm</p>
+          <a href="mailto:booking@grilli.com" class="body-4 sidebar-link">booking@namour.co.uk</a>
+          <div class="separator"></div>
+          <p class="contact-label">Booking Request</p>
+          <a href="tel:+88123123456" class="body-1 contact-number hover-underline">
+            +44-123-123456
+          </a>
+        </div>
+
       </nav>
+
+      <a href="reservations.html" class="btn btn-secondary">
+        <span class="text text-1">Find A Table</span>
+        <span class="text text-2" aria-hidden="true">Find A Table</span>
+      </a>
 
       <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
         <span class="line line-1"></span>
         <span class="line line-2"></span>
         <span class="line line-3"></span>
       </button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
     </div>
   </header>
+
 
   <!-- Main Content -->
   <main>
     <section class="hero-section">
       <div class="hero-content">
+        <br><br><br><br><br>
         <h1>Namour Restaurant</h1>
         <h3>Book your table</h3>
       </div>
@@ -395,7 +448,8 @@
       <p><strong>Effective Date:</strong> 10/04/2025</p>
 
       <p><strong>1. About Us</strong><br>
-        We are dedicated to providing exceptional dining experiences while respecting your privacy. This policy explains
+        We are dedicated to providing exceptional dining experiences while respecting your privacy. This policy
+        explains
         how we collect, use, and protect your personal information when you visit our restaurant, interact with us
         online, or use our services.</p>
 
@@ -406,7 +460,8 @@
         <li><strong>Reservations & Bookings:</strong> Name, contact details, and any special requests.</li>
         <li><strong>Transactions:</strong> Payment details, receipts, and billing information.</li>
         <li><strong>Website & Digital Interactions:</strong> IP addresses, cookies, and browsing behaviour.</li>
-        <li><strong>Marketing Preferences:</strong> Information provided when subscribing to newsletters or promotions.
+        <li><strong>Marketing Preferences:</strong> Information provided when subscribing to newsletters or
+          promotions.
         </li>
         <li><strong>Feedback & Communication:</strong> Records of interactions via phone, email, or social media.</li>
         <li><strong>Wi-Fi Usage:</strong> If you use our restaurant’s Wi-Fi, we may collect device information and
@@ -467,11 +522,13 @@
 
       <br>
       <p><strong>7. Cookies & Tracking Technologies</strong><br>
-        We use cookies to enhance your experience. You can manage cookie preferences through your browser settings.</p>
+        We use cookies to enhance your experience. You can manage cookie preferences through your browser settings.
+      </p>
 
       <br>
       <p><strong>8. Updates to This Policy</strong><br>
-        We may update this Privacy Policy periodically. Changes will be posted on our website, and continued use of our
+        We may update this Privacy Policy periodically. Changes will be posted on our website, and continued use of
+        our
         services implies acceptance of the revised policy.</p>
 
       <br>

@@ -45,7 +45,7 @@
   --gradient-1: linear-gradient(to top, hsla(0, 0%, 0%, 0.9), hsla(0, 0%, 0%, 0.7), transparent);
 
   /* === POPUP MODAL === */
-  
+
   /* ---------- Branches Dropdown Menu ---------- */
 
   /* Desktop dropdown */
@@ -1013,10 +1013,12 @@ body.nav-active {
 .hero {
   position: relative;
   padding-block: 0;
-  min-height: 80vh; /* Or 85vh */
+  min-height: 80vh;
+  /* Or 85vh */
   overflow: hidden;
   z-index: 1;
-  margin-top: 100px; /* Match header height */
+  margin-top: 100px;
+  /* Match header height */
 }
 
 
@@ -1060,7 +1062,8 @@ body.nav-active {
 } */
 
 .hero .slider-item {
-  position: relative; /* previously absolute */
+  position: relative;
+  /* previously absolute */
   top: unset;
   left: unset;
   transform: none;
@@ -2499,13 +2502,19 @@ textarea.input-field {
    * SERVICE
    */
 
-  .service .grid-list {
+  /* .service .grid-list {
     gap: 150px;
+  } */
+  .service .grid-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
   }
 
-  .service .grid-list li:nth-child(2n+1) {
+
+  /* .service .grid-list li:nth-child(2n+1) {
     transform: translateY(-160px);
-  }
+  } */
 
   .service .section-text {
     margin-block-end: 75px;
