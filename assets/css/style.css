@@ -1213,6 +1213,30 @@ body.nav-active {
   #SERVICE
 \*-----------------------------------*/
 
+.menu-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 in a row */
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Optional: responsive behavior */
+@media (max-width: 1024px) {
+  .menu-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 .service .section-title {
   margin-block-end: 16px;
 }
@@ -2213,7 +2237,7 @@ textarea.input-field {
   }
 
   :is(.service, .event) .grid-list {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 
   :is(.service, .event) .grid-list li:last-child {
