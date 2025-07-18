@@ -59,7 +59,7 @@
     left: 0;
     background-color: #111;
     display: none;
-    flex-direction: column;
+    flex-direction: row;
     min-width: 160px;
     z-index: 999;
     border: 1px solid #333;
@@ -96,6 +96,20 @@
     .dropdown-menu li a {
       color: white;
       padding-left: 20px;
+    }
+  }
+
+  /* New code */
+  .mobile-header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  @media (min-width: 993px) {
+    .nav-open-btn {
+      display: none;
     }
   }
 
