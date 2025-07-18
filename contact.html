@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap"
         rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <style>
         html,
         body {
@@ -100,14 +102,17 @@
                             <div class="separator"></div><span class="span">Reservations</span>
                         </a></li>
 
-                    <li class="navbar-item"><a href="menus.html" class="navbar-link hover-underline">
-                            <div class="separator"></div><span class="span">Menus</span>
-                        </a></li>
+                    <li class="navbar-item">
+                        <a href="index.html#menus" class="navbar-link hover-underline">
+                            <div class="separator"></div>
+                            <span class="span">Menus</span>
+                        </a>
+                    </li>
 
                     <!-- <li class="navbar-item dropdown">
                         <a href="#" class="navbar-link hover-underline">
                             <div class="separator"></div><span class="span">Branches</span>
-                        </a>
+                        </a> 
                         <ul class="dropdown-menu">
                             <li><a href="https://www.carltonlounge.co.uk/" target="_blank">Kingsbury</a></li>
                             <li><a href="https://www.sherekhanrestaurant.com/" target="_blank">Enfield</a></li>
@@ -119,7 +124,7 @@
                         </a></li>
 
                     <li class="navbar-item"><a href="contact.html" class="navbar-link hover-underline">
-                            <div class="separator"></div><span class="span">Contact</span>
+                            <div class="separator"></div><span class="span">Contact Us</span>
                         </a></li>
 
                     <!-- <li class="navbar-item"><a href="houserules.html" class="navbar-link hover-underline">
@@ -133,7 +138,7 @@
                     <address class="body-4">
                         10 Hanger Ln,<br>London W5 1ET
                     </address>
-                    <p class="body-4 navbar-text">Open: 9.30 am - 2.30pm</p>
+                    <!-- <p class="body-4 navbar-text">Open: 9.30 am - 2.30pm</p> -->
                     <a href="mailto:booking@grilli.com" class="body-4 sidebar-link">booking@namour.co.uk</a>
                     <div class="separator"></div>
                     <p class="contact-label">Booking Request</p>
@@ -169,7 +174,7 @@
                     <!-- Form -->
                     <div style="flex: 2; min-width: 280px;">
                         <br><br>
-                        <h2 class="headline-1 section-title">Drop Us a Line</h2>
+                        <h4 class="headline-1 section-title">GET IN TOUCH</h4>
 
                         <form action="https://formsubmit.co/pradhumya@carltonleisure.com" method="POST"
                             style="display: grid; gap: 1rem;">
@@ -185,35 +190,73 @@
                             <input type="text" name="name" class="input-field" placeholder="Your Name *" required />
                             <input type="email" name="email" class="input-field" placeholder="Your Email *" required />
                             <input type="tel" name="phone" class="input-field" placeholder="Your Phone *" required />
-
+                            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                                <div style="flex: 1; min-width: 150px;">
+                                    <label for="dateFrom" class="body-2" style="color: #fff;">Date From</label>
+                                    <input type="text" id="dateFrom" name="date_from" class="input-field" />
+                                </div>
+                                <div style="flex: 1; min-width: 150px;">
+                                    <label for="dateTo" class="body-2" style="color: #fff;">Date To</label>
+                                    <input type="text" id="dateTo" name="date_to" class="input-field" />
+                                </div>
+                            </div>
                             <select name="subject" class="input-field" required>
                                 <option value="">Reservation</option>
                                 <option value="general">General Inquiry</option>
-                                <option value="feedback">Feedback</option>
+                                <option value="feedback">Private Event</option>
+                                <option value="feedback">Special Occasion</option>
                             </select>
 
-                            <textarea name="message" class="input-field" placeholder="Message..." rows="5"
-                                required></textarea>
+                            <textarea name="message" class="input-field" placeholder="Message..." rows="5"></textarea>
 
                             <button type="submit" class="btn btn-primary" style="max-width: 220px;">
-                                <span class="text text-1">Book A Table</span>
-                                <span class="text text-2" aria-hidden="true">Book A Table</span>
+                                <span class="text text-1">Send Enquiry</span>
+                                <span class="text text-2" aria-hidden="true">Send Enquiry</span>
                             </button>
                         </form>
                     </div>
 
                     <!-- Info -->
-                    <div style="flex: 2; min-width: 280px;">
-                        <br><br><br><br><br>
-                        <p class="body-2" style="margin-bottom: 1rem;">
-                            Namour is located 10 minutes walk from Hangerlane tube station. Free parking
-                            in the Car Wash next door from 7pm or main road according to any parking restrictions.
-                        </p>
-                        <p class="body-2"><strong>Sunday – Thursday:</strong> 12pm – 2:30am</p>
-                        <p class="body-2">Strict last & Re Entry Policy – 11:45pm</p>
-                        <p class="body-2"><strong>Friday – Saturday:</strong> 12pm – 3:30am</p>
-                        <p class="body-2">Strict last & Re Entry Policy – 01:15am</p>
-                    </div>
+                    <!-- <div class="contact-content"
+                        style="display: flex; flex-wrap: wrap; align-items: stretch; justify-content: space-between; gap: 2rem;">
+
+                        
+                        <div class="contact-form" style="flex: 1 1 48%; min-width: 300px;">
+                            
+                        </div>
+
+                        
+                        <div class="contact-text"
+                            style="flex: 1 1 48%; min-width: 300px; display: flex; flex-direction: column; justify-content: center;">
+                            <p class="body-2" style="margin-bottom: 1.5rem; font-size: 16px; line-height: 1.8;">
+                                Whether you're planning a special celebration or simply looking to enjoy an
+                                unforgettable meal, <strong>Namour</strong> offers a bold and immersive dining
+                                experience like no other.
+                                Located in the heart of <em>[your area]</em>, our jungle-inspired interior and authentic
+                                Lebanese charcoal-grilled cuisine make us the perfect destination for those who
+                                appreciate flavour, flair, and atmosphere.
+                            </p>
+
+                            <p class="body-2" style="margin-bottom: 1.5rem; font-size: 16px; line-height: 1.8;">
+                                With over 30 years of combined culinary expertise behind every dish, our team is here to
+                                deliver more than just a meal — we create moments to remember. Whether you're dining in,
+                                celebrating an occasion, or picking up a quick bite from our live kitchen counter,
+                                Namour is here to exceed your expectations.
+                            </p>
+
+                            <p class="body-2" style="margin-bottom: 1.5rem; font-size: 16px; line-height: 1.8;">
+                                Please complete the form below and a member of our friendly team will be in touch
+                                shortly. You can also give us a call to make a reservation — we’re happy to help and
+                                can’t wait to welcome you.
+                            </p>
+
+                            <p class="body-2" style="font-size: 16px; line-height: 1.8;">
+                                <strong>T:</strong> [Insert Namour phone number]<br>
+                                <strong>E:</strong> [Insert Namour email address]
+                            </p>
+                        </div>
+
+                    </div> -->
                 </div>
             </section>
         </article>
@@ -236,7 +279,19 @@
     <script src="./assets/js/script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            flatpickr("#dateFrom", {
+                dateFormat: "d/m/Y",
+                defaultDate: "today"
+            });
 
+            flatpickr("#dateTo", {
+                dateFormat: "d/m/Y",
+                defaultDate: "today"
+            });
+        });
+    </script>
 </body>
 
 </html>
