@@ -18,20 +18,7 @@ const addEventOnElements = function (elements, eventType, callback) {
     if (elements[i]) elements[i].addEventListener(eventType, callback);
   }
 };
-const text = "INDULGE IN A NEW DINING EXPERIENCE";
-const element = document.getElementById("headline");
 
-let index = 0;
-
-function typeText() {
-  if (index < text.length) {
-    element.textContent += text.charAt(index);
-    index++;
-    setTimeout(typeText, 80); // typing speed
-  }
-}
-
-document.addEventListener("DOMContentLoaded", typeText);
 /**
  * NAVBAR
  */
