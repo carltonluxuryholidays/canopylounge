@@ -91,7 +91,7 @@
           <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
         </div>
 
-        <span class="span">+44 20396 27600</span>
+        <span class="span">0203 962 7600</span>
       </a>
 
       <div class="separator"></div>
@@ -112,7 +112,7 @@
 
 
   <!-- 
-    - #HEADER 
+    - #HEADER
   -->
 
   <header class="header" data-header>
@@ -340,11 +340,15 @@
       <!-- Wrapper to push hero below header -->
       <section class="hero text-center" aria-label="home" id="home">
         <!-- Background Video -->
-        <video autoplay muted loop playsinline>
+        <!-- <video autoplay muted loop playsinline>
           <source src="https://res.cloudinary.com/dgpuqdwgu/video/upload/v1750694037/HL_LANDING_PAGE_2_hg93ja.mp4"
             type="video/mp4">
           Your browser does not support the video tag.
-        </video>
+        </video> -->
+        <div class="hero-image-container">
+          <img src="https://res.cloudinary.com/dgpuqdwgu/image/upload/v1753106237/Untitled_design_uy4cle.jpg"
+            alt="Namour Hero" class="hero-image">
+        </div>
 
         <!-- Content Overlay -->
         <!-- <div class="hero-overlay">
@@ -373,10 +377,7 @@
         - #ABOUT
       -->
       <!-- About Section -->
-      <section class="section about" id="about" style="
-  padding: 80px 0;
-  background-color: black;
-">
+      <section id="about" class="about custom-about-section">
 
 
         <div class="container"
@@ -501,7 +502,7 @@
                 <div class="card-content">
 
                   <h3 class="title-4 card-title">
-                    <a href="#">Desert Menu</a>
+                    <a href="#">Dessert Menu</a>
                   </h3>
 
                   <a href="#" class="btn-text hover-underline label-2">View Menu</a>
@@ -749,7 +750,7 @@
 
         <address class="body-4">10 Hanger Ln, London W5 1ET</address>
         <a href="mailto:bookings@tigerbayshisha.co.uk" class="body-4 contact-link">bookings@tigerbayshisha.co.uk</a>
-        <a href="tel:+442039627600" class="body-4 contact-link">+44–20396-27600</a>
+        <a href="tel:+442039627600" class="body-4 contact-link">0203 962 7600</a>
 
         <div class="wrapper" style="margin-top: 10px;">
           <div class="separator"></div>
@@ -814,7 +815,29 @@
       document.getElementById('promo-modal').style.display = 'none';
     }
   </script> -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      function fixMobileHeroHeight() {
+        const heroContainer = document.querySelector('.hero-image-container');
+        const aboutSection = document.getElementById('about');
 
+        if (window.innerWidth <= 768 && heroContainer && aboutSection) {
+          // Match hero image height with its actual rendered height
+          const heroHeight = heroContainer.getBoundingClientRect().height;
+
+          // Remove any top margin/padding from the About section
+          aboutSection.style.marginTop = '0';
+          aboutSection.style.paddingTop = '0';
+
+          // Optional: log height if debugging
+          console.log('Hero image height:', heroHeight);
+        }
+      }
+
+      fixMobileHeroHeight();
+      window.addEventListener("resize", fixMobileHeroHeight); // Re-apply on resize
+    });
+  </script>
 </body>
 
 </html>
