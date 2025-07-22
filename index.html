@@ -263,7 +263,10 @@
             <div style="text-align: center; margin-bottom: 20px;">
               <!-- <p class="label-2 section-subtitle" style="font-size: 18px; color: #d4a762; margin-bottom: 10px;">NAMOUR
               </p> -->
-              <br><br><p class="section-subtitle label-2">INDULGE IN A NEW DINING EXPERIENCE</p>
+
+
+              <br>
+              <p class="section-subtitle label-2">INDULGE IN A NEW DINING EXPERIENCE</p>
             </div>
             <p style="font-size: 18px; line-height: 1.9;">
               <strong>Namour</strong>, meaning "Tiger," is a bold new elevated dining experience brought to you by the
@@ -281,7 +284,7 @@
 
           <!-- Right: Image -->
           <div class="about-image" style="flex: 1 1 500px; text-align: center;">
-            <img src="https://res.cloudinary.com/dgpuqdwgu/image/upload/v1750526280/DSC00501_nqszzd.jpg"
+            <img src="https://res.cloudinary.com/dgpuqdwgu/image/upload/v1753182426/Untitled_design_21_wkzuhm.jpg"
               alt="about banner" style="width: 100%; max-width: 500px; height: auto; border-radius: 6px;">
           </div>
 
@@ -319,7 +322,8 @@
                 <a href="https://www.tigerbayshisha.co.uk/wp-content/uploads/2025/07/Namour-food-menu.pdf"
                   class="has-before hover:shine">
                   <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
-                    <img src="https://res.cloudinary.com/dgpuqdwgu/image/upload/v1753175489/WhatsApp_Image_2025-07-22_at_10.06.53_80e594cb_iavvt7.jpg"
+                    <img
+                      src="https://res.cloudinary.com/dgpuqdwgu/image/upload/v1753175489/WhatsApp_Image_2025-07-22_at_10.06.53_80e594cb_iavvt7.jpg"
                       width="285" height="336" loading="lazy" alt="Appetizers" class="img-cover">
                   </figure>
                 </a>
@@ -344,7 +348,8 @@
                 <a href="https://www.tigerbayshisha.co.uk/wp-content/uploads/2025/07/Namour-Drinks-Menu.pdf"
                   class="has-before hover:shine">
                   <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
-                    <img src="https://res.cloudinary.com/dgpuqdwgu/image/upload/v1753175489/WhatsApp_Image_2025-07-22_at_10.06.55_8d057294_koz8co.jpg"
+                    <img
+                      src="https://res.cloudinary.com/dgpuqdwgu/image/upload/v1753175489/WhatsApp_Image_2025-07-22_at_10.06.55_8d057294_koz8co.jpg"
                       width="285" height="336" loading="lazy" alt="Breakfast" class="img-cover">
                   </figure>
                 </a>
@@ -397,7 +402,7 @@
                     <img src="https://res.cloudinary.com/dgpuqdwgu/image/upload/v1750526207/cld-sample-4.jpg"
                       width="285" height="336" loading="lazy" alt="Drinks" class="img-cover">
                   </figure>
-                </a>
+                </a> 
 
                 <div class="card-content">
 
@@ -715,6 +720,17 @@
       window.addEventListener("resize", fixMobileHeroHeight); // Re-apply on resize
     });
   </script>
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('[data-navbar]')?.classList.remove('active');
+        document.querySelector('[data-overlay]')?.classList.remove('active');
+        document.body.classList.remove('nav-active');
+        document.body.style.overflow = '';
+      });
+    });
+  </script>
+
 </body>
 
 </html>
