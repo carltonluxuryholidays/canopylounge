@@ -1399,6 +1399,18 @@ body.nav-active {
   }
 }
 
+/* Spacing issue  */
+@media (max-width: 768px) {
+  .container {
+    gap: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  #menus {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+}
 
 
 
@@ -1510,6 +1522,23 @@ body.nav-active {
 }
 
 
+@media (max-width: 768px) {
+  .about .container {
+    display: block !important;
+    gap: 0 !important;
+    padding: 0 15px;
+  }
+
+  .about-text,
+  .about-image {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .about-banner {
+    margin-block-end: 40px !important;
+  }
+}
 
 
 /*-----------------------------------*\

@@ -371,7 +371,7 @@
               </div>
             </li>
 
-            <li>
+            <!-- <li>
               <div class="service-card">
 
                 <a href="#" class="has-before hover:shine">
@@ -392,7 +392,7 @@
                 </div>
 
               </div>
-            </li>
+            </li> -->
 
             <!-- <li>
               <div class="service-card">
@@ -730,7 +730,36 @@
       });
     });
   </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      function removeGapBetweenSections() {
+        const aboutSection = document.getElementById("about");
+        const menusSection = document.getElementById("menus");
+        const aboutContainer = document.querySelector("#about .container");
 
+        if (aboutSection && menusSection) {
+          // Remove spacing between sections
+          aboutSection.style.marginBottom = "0";
+          aboutSection.style.paddingBottom = "0";
+          menusSection.style.marginTop = "0";
+          menusSection.style.paddingTop = "0";
+
+          // Remove gap between text and image for all viewports
+          if (aboutContainer) {
+            // Optional: only reduce gap on smaller screens
+            if (window.innerWidth < 768) {
+              aboutContainer.style.gap = "10px";
+            } else {
+              aboutContainer.style.gap = "40px";
+            }
+          }
+        }
+      }
+
+      removeGapBetweenSections();
+      window.addEventListener("resize", removeGapBetweenSections);
+    });
+  </script>
 </body>
 
 </html>
