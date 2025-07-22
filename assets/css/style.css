@@ -679,42 +679,46 @@ body.nav-active {
 .hero-image-container {
   width: 100%;
   height: 80vh;
-  /* Full screen */
   overflow: hidden;
   background-color: black;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .hero-image {
   width: 100%;
-  height: 80vh;
+  height: 100%;
   object-fit: cover;
   display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
+/* Hide mobile image on desktop */
+.mobile-hero {
+  display: none;
+}
 
-/* .hero-image {
-  width: 100%;
-  height: 80vh; */
-/* Adjust height for desktop */
-/* object-fit: cover;
-  display: block;
-} */
-/* Mobile-specific cleanup */
+/* Hide desktop image on mobile */
 @media (max-width: 768px) {
-  .hero-image-container {
-    height: auto;
-    /* Let image define height */
-    margin: 0 auto;
+  .desktop-hero {
+    display: none;
   }
 
-  .custom-about-section {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
+  .mobile-hero {
+    display: block;
+    object-fit: cover;
+  }
+
+  .hero-image-container {
+    height: 100vh;
+    /* Optional: Full screen height for mobile */
   }
 }
+
 
 
 
