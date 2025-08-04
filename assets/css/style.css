@@ -188,7 +188,173 @@
 }
 
 
+/* New logo height */
 
+.small-logo img {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .small-logo img {
+    height: 80px;
+  }
+}
+
+.logo-wrapper {
+  padding-left: 20px;
+  /* Push away from left edge */
+  display: inline-block;
+}
+
+.custom-logo {
+  height: 100px;
+  /* Smaller height */
+  width: auto;
+}
+
+/* About Canopy Information  */
+
+/* About Section Background */
+.canopy-about-section {
+  background-image: url("https://res.cloudinary.com/dgpuqdwgu/image/upload/v1754303967/ChatGPT_Image_Aug_4_2025_11_39_09_AM_lmpugp.png");
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+  margin-top: -10px;
+  color: white;
+  height: 650px;
+  /* ✅ Add this */
+}
+
+
+/* Flex container */
+.canopy-about-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: stretch;
+  /* ✅ ensure equal height */
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+/* Left: Text */
+.canopy-about-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1.8;
+  text-align: left;
+}
+
+/* ABOUT US Title */
+.section-title {
+  font-size: 30px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
+/* Subtitle */
+.about-heading {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Right: Image */
+.canopy-about-image {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  /* move image to top first */
+  justify-content: center;
+  margin-top: 140px;
+  /* ✅ Add margin to push image downward */
+}
+
+
+.canopy-about-image img {
+  width: 100%;
+  max-width: 500px;
+  height: 350px;
+  border-radius: 6px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .canopy-about-container {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    /* Make content centered in column layout */
+  }
+
+  .canopy-about-text {
+    width: 100%;
+    text-align: center;
+    padding: 0 15px;
+    height: auto;
+    /* Reset any fixed height */
+  }
+
+  .canopy-about-image {
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .canopy-about-image img {
+    width: 90%;
+    height: auto;
+    max-width: 400px;
+  }
+
+  .canopy-about-section {
+    height: auto !important;
+    /* Reset section height on small screens */
+    padding: 60px 15px;
+  }
+}
+
+/* Food panda & grab logo */
+.canopy-booking-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.canopy-booking-icons img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 12px;
+  background-color: white;
+  padding: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.canopy-booking-icons img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.canopy-booking-text {
+  margin-top: 12px;
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
 
 
 /*-----------------------------------*\
@@ -289,6 +455,166 @@ body.nav-active {
 }
 
 
+/* New Video Add */
+
+/* Container for the hero video section */
+.namour-hero-video-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Video wrapper */
+.namour-hero-video-container {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  /* ✅ Set to 80% of viewport height */
+  margin: 0;
+  padding: 0;
+}
+
+/* Shared video styling */
+.namour-hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* ✅ Fill the entire 80vh container */
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Desktop version visible on larger screens only */
+.desktop-video {
+  display: block;
+}
+
+.mobile-video {
+  display: none;
+}
+
+/* Responsive video swapping */
+@media (max-width: 768px) {
+  .desktop-video {
+    display: none;
+  }
+
+  .mobile-video {
+    display: block;
+  }
+}
+
+/* Fix spacing before About section */
+.about.custom-about-section {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Video wordings */
+
+/* Overlay base */
+.namour-hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+  color: #fff;
+  font-family: 'Forum', serif;
+}
+
+/* "Canopy" in script */
+.canopy-script {
+  font-family: 'DM Sans', cursive;
+  font-weight: 600;
+  font-size: 60px;
+  color: #e74c3c;
+  /* bold red tone */
+  letter-spacing: 1px;
+}
+
+/* "ROOFTOP BAR" in serif uppercase */
+.rooftop-serif {
+  font-family: 'Forum', serif;
+  font-size: 30px;
+  letter-spacing: 3px;
+  color: #fff;
+}
+
+/* Decorative ✻ divider */
+.overlay-divider {
+  font-size: 22px;
+  color: #e74c3c;
+  margin: 12px 0;
+}
+
+/* Subtitle text */
+.overlay-subtext {
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.canopy-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 2;
+  padding: 1rem;
+  width: 100%;
+}
+
+.canopy-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: normal;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.canopy-script {
+  font-family: 'Dancing Script', cursive;
+  font-size: 5.2rem;
+  color: #e84545;
+}
+
+.canopy-subtitle {
+  font-size: 2.75rem;
+  letter-spacing: 2px;
+}
+
+.canopy-divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.canopy-divider .line {
+  width: 80px;
+  height: 1px;
+  background-color: white;
+  margin: 0 10px;
+}
+
+.canopy-divider .asterisk {
+  font-size: 1.2rem;
+  color: #e84545;
+}
+
+.canopy-tagline {
+  font-size: 1.2rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
 
 
 
@@ -1291,7 +1617,7 @@ body.nav-active {
   #SERVICE
 \*-----------------------------------*/
 
-/* .menu-row {
+/* .   {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
