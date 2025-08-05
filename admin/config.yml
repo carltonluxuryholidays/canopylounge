@@ -1,0 +1,22 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "instagram"
+    label: "Instagram Images"
+    files:
+      - file: "images.json"
+        label: "Instagram Images JSON"
+        name: "images"
+        format: "json"
+        fields:
+          - label: "Instagram Images"
+            name: "images"
+            widget: "list"
+            fields:
+              - { label: "Link", name: "link", widget: "string" }
+              - { label: "Image URL", name: "src", widget: "string" }

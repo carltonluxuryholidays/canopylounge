@@ -217,7 +217,7 @@
 /* About Canopy Information  */
 
 /* About Section Background */
-.canopy-about-section {
+/* .canopy-about-section {
   background-image: url("https://res.cloudinary.com/dgpuqdwgu/image/upload/v1754303967/ChatGPT_Image_Aug_4_2025_11_39_09_AM_lmpugp.png");
   background-size: cover;
   background-position: center;
@@ -225,8 +225,18 @@
   margin-top: -10px;
   color: white;
   height: 650px;
-  /* ✅ Add this */
+} */
+.canopy-about-section {
+  background-color: #111111;
+  /* Change to any solid color you want */
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+  margin-top: -10px;
+  color: white;
+  height: 650px;
 }
+
 
 
 /* Flex container */
@@ -356,10 +366,12 @@
   letter-spacing: 0.5px;
 }
 
-/* whatsapp logo  */
-.whatsapp-float {
+/* WhatsApp inside video section */
+.whatsapp-in-video {
   position: fixed;
+  /* Change from absolute → fixed */
   bottom: -200px;
+  /* Adjust to push it near bottom edge */
   right: 20px;
   background-color: #25D366;
   color: white;
@@ -367,26 +379,40 @@
   border-radius: 30px;
   display: flex;
   align-items: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   text-decoration: none;
   z-index: 1000;
+  /* Ensure it stays on top */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   transition: transform 0.3s ease;
 }
 
-.whatsapp-float:hover {
+
+.whatsapp-in-video:hover {
   transform: scale(1.05);
 }
 
-.whatsapp-float img {
+.whatsapp-in-video img {
   width: 24px;
   height: 24px;
   margin-right: 8px;
 }
 
-.whatsapp-float span {
+.whatsapp-in-video span {
   font-size: 14px;
   font-weight: 500;
 }
+
+@media (max-width: 768px) {
+  .whatsapp-in-video {
+    bottom: -100px;
+    padding: 8px 12px;
+  }
+
+  .whatsapp-in-video span {
+    font-size: 12px;
+  }
+}
+
 
 /*-----------------------------------*\
   #RESET
@@ -593,7 +619,7 @@ body.nav-active {
 }
 
 .canopy-overlay {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

@@ -260,8 +260,7 @@
 
             <!-- ✅ Add WhatsApp button as its own line -->
             <div class="canopy-whatsapp-link">
-              <!-- WhatsApp Floating Button -->
-              <a href="https://wa.me/447586525859" class="whatsapp-float" target="_blank" rel="noopener">
+              <a href="https://wa.me/447586525859" class="whatsapp-in-video" target="_blank" rel="noopener">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
                 <span>Message Us</span>
               </a>
@@ -521,7 +520,7 @@
       </section>
 
       <!-- 
-        - #EVENT we all know the world as 
+        - #EVENT 
       -->
 
       <section class="section event" aria-label="event"
@@ -540,7 +539,7 @@
       </section>
 
 
-      <script>
+      <!-- <script>
         const images = [
           {
             link: "https://www.instagram.com/canopyloungekl/?hl=en",
@@ -600,6 +599,53 @@
 
         renderSliderImages(); // initial call
         setInterval(rotateSlider, 3000); // rotate every 3 seconds
+      </script> -->
+      <script>
+        let currentIndex = 0;
+        let images = [];
+
+        async function fetchImages() {
+          try {
+            const res = await fetch('images.json'); // Make sure this file exists in your repo
+            if (!res.ok) throw new Error("Failed to load images.json");
+            images = await res.json();
+            renderSliderImages();
+            setInterval(rotateSlider, 3000);
+          } catch (error) {
+            console.error("Error fetching images:", error);
+          }
+        }
+
+        function renderSliderImages() {
+          const container = document.getElementById("instagram-slider");
+          container.innerHTML = "";
+
+          const visibleImages = images.slice(currentIndex, currentIndex + 3);
+
+          visibleImages.forEach(({ link, src }) => {
+            const card = document.createElement("a");
+            card.href = link;
+            card.target = "_blank";
+            card.className = "instagram-card";
+            card.style.position = "relative";
+
+            card.innerHTML = `
+        <img src="${src}" alt="Instagram post" class="post-img" width="350" height="450"
+          style="border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.5);" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram logo"
+          style="position: absolute; bottom: 12px; right: 12px; width: 28px; height: 28px;" />
+      `;
+
+            container.appendChild(card);
+          });
+        }
+
+        function rotateSlider() {
+          currentIndex = (currentIndex + 3) % images.length;
+          renderSliderImages();
+        }
+
+        fetchImages(); // 🚀 Start here
       </script>
 
     </article>
